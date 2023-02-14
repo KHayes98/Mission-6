@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kchay\\source\\repos\\Mission_6\\Mission-6\\Mission-6.csproj",
+      "projectUniqueName": "C:\\Users\\kchay\\source\\repos\\Mission-6\\Mission-6\\Mission-6.csproj",
       "projectName": "Mission-6",
-      "projectPath": "C:\\Users\\kchay\\source\\repos\\Mission_6\\Mission-6\\Mission-6.csproj",
+      "projectPath": "C:\\Users\\kchay\\source\\repos\\Mission-6\\Mission-6\\Mission-6.csproj",
       "packagesPath": "C:\\Users\\kchay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kchay\\source\\repos\\Mission_6\\Mission-6\\obj\\",
+      "outputPath": "C:\\Users\\kchay\\source\\repos\\Mission-6\\Mission-6\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kchay\\AppData\\Roaming\\NuGet\\NuGet.Config",
