@@ -23,6 +23,11 @@ namespace Mission_6.Controllers
             return View();
         }
 
+        public IActionResult Podcasts()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
