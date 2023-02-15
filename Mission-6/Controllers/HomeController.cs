@@ -28,6 +28,11 @@ namespace Mission_6.Controllers
             return View();
         }
 
+        public IActionResult Database()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
