@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Mission_6.Models
 {
-    public class movieForm
+    public class MovieForm
     {
+        [Key]
+        [Required]
+        public int MovieID { get; set; }
         public string category { get; set; }
         public string title { get; set; }
         public short year { get; set; }

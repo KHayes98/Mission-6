@@ -13,7 +13,7 @@ namespace Mission_6.Models
 
         }
 
-        public DbSet<movieForm> responses { get; set; }
+        public DbSet<MovieForm> responses { get; set; }
 
     }
 }

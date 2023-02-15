@@ -35,7 +35,7 @@ namespace Mission_6.Controllers
         }
 
         [HttpPost]
-        public IActionResult Database(movieForm ar)
+        public IActionResult Database(MovieForm ar)
         {
             return View("Confirmation", ar);
         }
