@@ -12,10 +12,12 @@ namespace Mission_6.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private MovieDatabaseContext _movieContext { get; set; }
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, MovieDatabaseContext someName)
         {
             _logger = logger;
+            _movieContext = someName;
         }
 
         public IActionResult Index()
@@ -37,6 +39,9 @@ namespace Mission_6.Controllers
         [HttpPost]
         public IActionResult Database(MovieForm ar)
         {
+            _movieContext.Add(ar);
+            _movieContext.SaveChanges();
+
             return View("Confirmation", ar);
         }
 
