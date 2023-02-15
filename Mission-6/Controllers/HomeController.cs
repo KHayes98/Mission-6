@@ -28,9 +28,16 @@ namespace Mission_6.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Database()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Database(movieForm ar)
+        {
+            return View("Confirmation", ar);
         }
 
         public IActionResult Privacy()

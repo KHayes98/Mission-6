@@ -7,7 +7,7 @@
 <h1>Movie Database</h1>
 
 <div>
-    <form>
+    <form method="post">
         <label asp-for="category">Category:</label>
         <select asp-for="category">
             <option value="action/adventure">Action/Adventure</option>
@@ -54,8 +54,8 @@
         <br />
 
         <label asp-for="notes">Notes:</label>
-        <textarea asp-for="notes"></textarea>
+        <textarea asp-for="notes" maxlength="25"></textarea>
         <br />
-        <input type="submit" />
+        <button type="submit">Submit Movie</button>
     </form>
 </div>

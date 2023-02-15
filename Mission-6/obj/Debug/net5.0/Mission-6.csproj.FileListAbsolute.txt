@@ -40,3 +40,4 @@ C:\Users\kchay\source\repos\Mission-6\Mission-6\obj\Debug\net5.0\Mission-6.genru
 C:\Users\kchay\source\repos\Mission-6\Mission-6\obj\Debug\net5.0\Mission-6.csproj.CopyComplete
 C:\Users\kchay\source\repos\Mission-6\Mission-6\obj\Debug\net5.0\Razor\Views\Home\Podcasts.cshtml.g.cs
 C:\Users\kchay\source\repos\Mission-6\Mission-6\obj\Debug\net5.0\Razor\Views\Home\Database.cshtml.g.cs
+C:\Users\kchay\source\repos\Mission-6\Mission-6\obj\Debug\net5.0\Razor\Views\Home\Confirmation.cshtml.g.cs
