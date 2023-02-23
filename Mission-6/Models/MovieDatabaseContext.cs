@@ -13,47 +13,59 @@ namespace Mission_6.Models
 
         }
 
-        public DbSet<MovieForm> responses { get; set; }
+        public DbSet<MovieForm> Responses { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder mb)
         {
+            mb.Entity<Category>().HasData(
+                    new Category { CategoryID=1, CategoryName="Action/Adventure"},
+                    new Category { CategoryID=2, CategoryName="Comedy"},
+                    new Category { CategoryID = 3, CategoryName = "Drama" },
+                    new Category { CategoryID = 4, CategoryName = "Family" },
+                    new Category { CategoryID = 5, CategoryName = "Horror/Suspense" },
+                    new Category { CategoryID = 6, CategoryName = "Miscellaneous" },
+                    new Category { CategoryID = 7, CategoryName = "Television" },
+                    new Category { CategoryID = 8, CategoryName = "VHS" }
+                );
+
             mb.Entity<MovieForm>().HasData(
 
                     new MovieForm
                     {
                         MovieID = 1,
-                        category = "Action/Adventure",
-                        title = "Star Trek (2009)",
-                        year = 2009,
-                        director = "J.J. Abrams",
-                        rating = "PG-13",
-                        edited = false,
-                        lentTo = "",
-                        notes = ""
+                        CategoryID = 1,
+                        Title = "Star Trek (2009)",
+                        Year = 2009,
+                        Director = "J.J. Abrams",
+                        Rating = "PG-13",
+                        Edited = false,
+                        LentTo = "",
+                        Notes = ""
                     },
                     new MovieForm
                     {
                         MovieID = 2,
-                        category = "Action/Adventure",
-                        title = "Star Wars: Revenge of the Sith",
-                        year = 2005,
-                        director = "George Lucus",
-                        rating = "PG-13",
-                        edited = false,
-                        lentTo = "",
-                        notes = ""
+                        CategoryID = 1,
+                        Title = "Star Wars: Revenge of the Sith",
+                        Year = 2005,
+                        Director = "George Lucus",
+                        Rating = "PG-13",
+                        Edited = false,
+                        LentTo = "",
+                        Notes = ""
                     },
                     new MovieForm
                     {
                         MovieID = 3,
-                        category = "Action/Adventure",
-                        title = "Captain America: The Winter Soldier",
-                        year = 2014,
-                        director = "Joe & Anthony Russo",
-                        rating = "PG-13",
-                        edited = false,
-                        lentTo = "",
-                        notes = ""
+                        CategoryID = 1,
+                        Title = "Captain America: The Winter Soldier",
+                        Year = 2014,
+                        Director = "Joe & Anthony Russo",
+                        Rating = "PG-13",
+                        Edited = false,
+                        LentTo = "",
+                        Notes = ""
                     }
                 );
         }

@@ -11,15 +11,15 @@ namespace Mission_6.Models
         [Key]
         [Required]
         public int MovieID { get; set; }
-        public string category { get; set; }
-        public string title { get; set; }
-        public short year { get; set; }
-        public string director { get; set; }
-        public string rating { get; set; }
-        public bool edited { get; set; }
-        public string lentTo { get; set; }
-        public string notes { get; set; }
+        public string Title { get; set; }
+        public short Year { get; set; }
+        public string Director { get; set; }
+        public string Rating { get; set; }
+        public bool Edited { get; set; }
+        public string LentTo { get; set; }
+        public string Notes { get; set; }
 
-
+        public int CategoryID { get; set; }
+        public Category Category { get; set; }
     }
 }

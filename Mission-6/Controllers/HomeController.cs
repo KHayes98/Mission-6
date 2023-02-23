@@ -11,12 +11,10 @@ namespace Mission_6.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         private MovieDatabaseContext _movieContext { get; set; }
 
-        public HomeController(ILogger<HomeController> logger, MovieDatabaseContext someName)
+        public HomeController(MovieDatabaseContext someName)
         {
-            _logger = logger;
             _movieContext = someName;
         }
 
@@ -45,15 +43,13 @@ namespace Mission_6.Controllers
             return View("Confirmation", ar);
         }
 
-        public IActionResult Privacy()
+        [HttpGet]
+        public IActionResult MovieList ()
         {
-            return View();
+            var movies =_movieContext.Responses.OrderBy(x => x.Category).ToList();
+
+            return View(movies);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
