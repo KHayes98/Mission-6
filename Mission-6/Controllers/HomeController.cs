@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Mission_6.Models;
 using System;
@@ -31,6 +32,8 @@ namespace Mission_6.Controllers
         [HttpGet]
         public IActionResult Database()
         {
+            ViewBag.Categories = _movieContext.Categories.ToList();
+
             return View();
         }
 
@@ -46,9 +49,34 @@ namespace Mission_6.Controllers
         [HttpGet]
         public IActionResult MovieList ()
         {
-            var movies =_movieContext.Responses.OrderBy(x => x.Category).ToList();
+            var movies =_movieContext.Responses
+                .Include(x => x.Category)
+                .OrderBy(x => x.Category).ToList();
 
             return View(movies);
+        }
+
+        [HttpGet]
+        public IActionResult Edit (int movieid)
+        {
+            ViewBag.Categories = _movieContext.Categories.ToList();
+
+            var movie = _movieContext.Responses.Single(x => x.MovieID == movieid);
+
+            return View("Database", movie);
+        }
+        [HttpPost]
+        public IActionResult Edit (MovieForm ar)
+        {
+            _movieContext.Update(ar);
+            _movieContext.SaveChanges();
+
+            return RedirectToAction("MovieList");
+        }
+
+        public IActionResult Delete ()
+        {
+            return View();
         }
 
     }
