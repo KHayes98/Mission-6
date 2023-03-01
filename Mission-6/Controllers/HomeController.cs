@@ -40,11 +40,23 @@ namespace Mission_6.Controllers
         [HttpPost]
         public IActionResult Database(MovieForm ar)
         {
-            _movieContext.Add(ar);
-            _movieContext.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                _movieContext.Add(ar);
+                _movieContext.SaveChanges();
 
-            return View("Confirmation", ar);
+                return View("Confirmation", ar);
+            }
+            else
+            {
+                ViewBag.Categories = _movieContext.Categories.ToList();
+
+                return View(ar);
+            }
+
         }
+
+
 
         [HttpGet]
         public IActionResult MovieList ()
@@ -74,10 +86,20 @@ namespace Mission_6.Controllers
             return RedirectToAction("MovieList");
         }
 
-        public IActionResult Delete ()
+        [HttpGet]
+        public IActionResult Delete (int movieid)
         {
+            var movie = _movieContext.Responses.Single(x => x.MovieID == movieid);
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Delete (MovieForm mf)
+        {
+            _movieContext.Responses.Remove(mf);
+            _movieContext.SaveChanges();
+
+            return RedirectToAction("MovieList");
+        }
     }
 }

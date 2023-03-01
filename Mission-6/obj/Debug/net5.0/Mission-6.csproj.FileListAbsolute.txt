@@ -65,3 +65,4 @@ C:\Users\kchay\source\repos\Mission-6\Mission-6\bin\Debug\net5.0\runtimes\win-x8
 C:\Users\kchay\source\repos\Mission-6\Mission-6\obj\Debug\net5.0\Razor\Views\Home\MovieList.cshtml.g.cs
 C:\Users\kchay\source\repos\Mission-6\Mission-6\bin\Debug\net5.0\ref\Mission-6.dll
 C:\Users\kchay\source\repos\Mission-6\Mission-6\obj\Debug\net5.0\staticwebassets\Mission-6.StaticWebAssets.xml
+C:\Users\kchay\source\repos\Mission-6\Mission-6\obj\Debug\net5.0\Razor\Views\Home\Delete.cshtml.g.cs
